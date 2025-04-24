@@ -19,6 +19,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - run: npm ci
+      - run: npm run lint --if-present
+      - run: npm run build --if-present
       - run: npm test --if-present
 
       - name: Extract version and tag
@@ -33,6 +35,6 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Publish to npm
-        run: npm publish --tag ${{ steps.version.outputs.tag }}
+        run: npm publish --tag ${{ steps.version.outputs.tag }} --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
