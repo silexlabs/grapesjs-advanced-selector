@@ -1,3 +1,11 @@
+> [!IMPORTANT]
+> This project has moved to the Silex monorepo: https://short.silex.me/code
+>
+> Please open issues and pull requests there.
+>
+> The npm package is no longer maintained on its own. Details and how to help: https://github.com/GrapesJS/grapesjs/discussions/6779
+
+
 [![Documentation](https://img.shields.io/badge/docs-selector%20guide-blue?style=flat-square)](https://docs.silex.me/en/user/selectors#valid-selectors-guide)
 
 # GrapesJS Advanced Selector Manager
